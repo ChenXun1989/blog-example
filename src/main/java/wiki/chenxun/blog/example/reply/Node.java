@@ -1,7 +1,7 @@
 /* Copyright © 2020 Yuech and/or its affiliates. All rights reserved. */
 package wiki.chenxun.blog.example.reply;
 
-import lombok.Builder;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 /**
@@ -10,7 +10,7 @@ import lombok.Getter;
  * @date 2021-05-19 3:43 下午
  */
 @Getter
-@Builder
+@AllArgsConstructor
 public class Node {
 
     /**
@@ -53,8 +53,8 @@ public class Node {
      */
     private String data;
 
-    public static Node rootNote(String id, String treeId) {
-        Node node = new Node(id, treeId, 1, 2, 0, 1, null, null);
+    public static Node rootNote(String id, String treeId,String data) {
+        Node node = new Node(id, treeId, 1, 2, 0, 1, null, data);
         return node;
     }
 
